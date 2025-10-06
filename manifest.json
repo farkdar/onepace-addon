@@ -1,9 +1,12 @@
 {
   "id": "org.onepace.addon",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "name": "One Pace",
-  "description": "One Pace (edits) — manifest estático via GitHub Pages",
-  "resources": ["catalog","meta","stream"],
+  "description": "Streams do One Pace (IMDb tt31228002) usando Cinemeta para temporadas/episódios.",
+  "resources": ["catalog", "meta","stream"],
   "types": ["series"],
-  "catalogs": [{ "id":"onepace_catalog", "type":"series", "name":"One Pace (Edits)" }]
+  "catalogs": [
+    { "id": "onepace_catalog", "type": "series", "name": "One Pace (Edits)" }
+  ],
+  "idPrefixes": ["tt31228002"]
 }

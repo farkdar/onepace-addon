@@ -2,22 +2,9 @@
   "meta": {
     "id": "tt31228002",
     "type": "series",
-    "name": "One Pace (Edit)",
+    "name": "One Pace",
     "poster": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/poster.png",
     "logo": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/logo.png",
-    "background": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/banner.jpg",
-    "seasons": [
-      {
-        "season": 1,
-        "name": "Romance Down"
-      }
-    ],
-    "videos": [
-      { "season": 1, "episode": 1, "id": "tt31228002:1:1", "title": "S01E01 - Romance Dawn, the Dawn of an Adventure", "released": "2020-12-02" },
-      { "season": 1, "episode": 2, "id": "tt31228002:1:2", "title": "S01E02 - They Call Him 'Straw Hat' Luffy", "released": "2020-12-02" },
-      { "season": 1, "episode": 3, "id": "tt31228002:1:3", "title": "S01E03 - The Pirate King and the Master Swordsman", "released": "2020-12-02" },
-      { "season": 1, "episode": 4, "id": "tt31228002:1:4", "title": "S01E04 - The First", "released": "2020-12-02" }
-    ]
+    "background": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/banner.jpg"
   }
 }
-
