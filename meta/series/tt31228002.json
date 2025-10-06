@@ -30,6 +30,7 @@
       {
         "name": "The Pirate King and the Master Swordsman",
         "season": 1,
+        "episode":3,
         "number": 3,
         "firstAired": "2020-12-02T00:00:00.000Z",
         "rating": "9.2",
@@ -40,6 +41,7 @@
       {
         "name": "The First",
         "season": 1,
+        "episode":4,
         "number": 4,
         "firstAired": "2020-12-02T00:00:00.000Z",
         "rating": "8.8",
@@ -50,6 +52,7 @@
       {
         "name": "Enter: Nami",
         "season": 2,
+        "episode":1,
         "number": 1,
         "firstAired": "2024-10-12T00:00:00.000Z",
         "rating": "8.4",
@@ -60,6 +63,7 @@
       {
         "name": "Treasure",
         "season": 2,
+        "episode":2,
         "number": 2,
         "firstAired": "2021-08-07T00:00:00.000Z",
         "rating": "8.9",
@@ -70,6 +74,7 @@
       {
         "name": "Pirate Buggy \"the Clown\"",
         "season": 2,
+        "episode":3,
         "number": 3,
         "firstAired": "2021-08-07T00:00:00.000Z",
         "rating": "8.9",
@@ -80,6 +85,7 @@
       {
         "name": "Captain Usopp",
         "season": 3,
+        "episode":1,
         "number": 1,
         "firstAired": "2024-10-12T00:00:00.000Z",
         "rating": "8.8",
@@ -90,6 +96,7 @@
       {
         "name": "Captain Kuro",
         "season": 3,
+        "episode":2,
         "number": 2,
         "firstAired": "2024-10-18T00:00:00.000Z",
         "rating": "8.4",
@@ -100,6 +107,7 @@
       {
         "name": "The Slope",
         "season": 3,
+        "episode":3,
         "number": 3,
         "firstAired": "2024-12-21T00:00:00.000Z",
         "rating": "0",
@@ -110,6 +118,7 @@
       {
         "name": "The Silent Man",
         "season": 3,
+        "episode":4,
         "number": 4,
         "firstAired": "2017-07-16T00:00:00.000Z",
         "rating": "0",
@@ -120,6 +129,7 @@
       {
         "name": "Captain Kuro of a Thousand Plans",
         "season": 3,
+        "episode":5,
         "number": 5,
         "firstAired": "2017-10-21T00:00:00.000Z",
         "rating": "0",
@@ -130,6 +140,7 @@
       {
         "name": "For Whom the Bell Tolls",
         "season": 3,
+        "episode":6,
         "number": 6,
         "firstAired": "2017-10-21T00:00:00.000Z",
         "rating": "0",
@@ -140,6 +151,7 @@
       {
         "name": "To the Sea",
         "season": 3,
+        "episode":7,
         "number": 7,
         "firstAired": "2025-04-11T00:00:00.000Z",
         "rating": "0",
@@ -150,6 +162,7 @@
       {
         "name": "You're the Rare Breed",
         "season": 4,
+        "episode":1,
         "number": 1,
         "firstAired": "2023-01-28T00:00:00.000Z",
         "rating": "0",
@@ -160,6 +173,7 @@
       {
         "name": "Enter: Sanji",
         "season": 5,
+        "episode":1,
         "number": 1,
         "firstAired": "2021-11-21T00:00:00.000Z",
         "rating": "0",
@@ -170,6 +184,7 @@
       {
         "name": "Pirate Commodore Don Krieg",
         "season": 5,
+        "episode":2,
         "number": 2,
         "firstAired": "2021-12-20T00:00:00.000Z",
         "rating": "0",
@@ -180,6 +195,7 @@
       {
         "name": "Storm",
         "season": 5,
+        "episode":3,
         "number": 3,
         "firstAired": "2022-12-16T00:00:00.000Z",
         "rating": "0",
@@ -190,6 +206,7 @@
       {
         "name": "The Vow",
         "season": 5,
+        "episode":4,
         "number": 4,
         "firstAired": "2023-05-02T00:00:00.000Z",
         "rating": "0",
