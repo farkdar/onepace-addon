@@ -4,7 +4,9 @@
       "id": "tt31228002",
       "type": "series",
       "name": "One Pace",
-      "poster": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/poster.png"
+      "poster": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/poster.png",
+      "logo": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/logo.png",
+      "background": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/banner.jpg"
     }
   ]
 }
