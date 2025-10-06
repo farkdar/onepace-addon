@@ -3,9 +3,9 @@
     "id": "tt31228002",
     "type": "series",
     "name": "One Pace (Edit)",
-    "poster": "https://raw.githubusercontent.com/<username>/<repo>/main/assets/poster.png",
-    "logo": "https://raw.githubusercontent.com/<username>/<repo>/main/assets/logo.png",
-    "background": "https://raw.githubusercontent.com/<username>/<repo>/main/assets/banner.jpg",
+    "poster": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/poster.png",
+    "logo": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/logo.png",
+    "background": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/banner.jpg",
     "seasons": [
       {
         "season": 1,
