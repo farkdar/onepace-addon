@@ -1,0 +1,14 @@
+Quando entrar na pasta
+$ git add . // adiciona os novos arquivos para fazer upload
+$ git commit -m "git commit -m " // criar uma mensagem de commit para as alterações
+$ git status // exibe informações importantes sobre as modificações e o status de preparação de seus arquivos
+
+
+
+Num geral o mais importante é 
+
+Para atualizar a maquina: (faça antes de atualizar qualquer coisa)
+git checkout main && git pull origin main --rebase
+
+Para atualizar o github:
+git add . && git commit -m "mensagem do commit" && git pull --rebase && git push
