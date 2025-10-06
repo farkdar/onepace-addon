@@ -7,10 +7,6 @@ const poster = "https://raw.githubusercontent.com/farkdar/onepace-addon/main/ass
 const logo = "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/logo.png";
 const background = "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/banner.jpg";
 
-// base de thumbs por episódio (usa imdb_id + season + episode)
-const EP_THUMB = (imdbId, s, e) =>
-  `https://episodes.metahub.space/${imdbId}/${s}/${e}/w780.jpg`;
-
 const ensureDirs = async (filePath) => {
   const dir = filePath.split("/").slice(0, -1).join("/");
   await fs.mkdir(dir, { recursive: true });
@@ -22,26 +18,6 @@ const main = async () => {
   const data = await res.json();
 
   const base = data?.meta ?? {};
-  const imdbId = base.imdb_id || "tt31228002";
-
-  // trata a lista de vídeos copiando number -> episode e preenchendo thumbnail
-  const treatedVideos = Array.isArray(base.videos)
-    ? base.videos.map((v) => {
-        const season = Number(v.season ?? 0);
-        const number = Number(v.number ?? v.episode ?? 0);
-
-        return {
-          ...v,
-          season,
-          number,
-          // garante episode (cópia do number)
-          episode: Number(v.episode ?? number),
-          // se não houver thumbnail, gera baseado no imdb/season/episode
-          thumbnail: v.thumbnail || EP_THUMB(imdbId, season, number),
-        };
-      })
-    : [];
-
   const merged = {
     meta: {
       id: "tt31228002",
@@ -52,11 +28,18 @@ const main = async () => {
       // injeta/força suas imagens:
       poster,
       logo,
-      background,
-      // substitui a lista por vídeos tratados
-      videos: treatedVideos,
-    },
+      background
+    }
   };
+
+  // garantia: sempre tenha videos (copiados do cinemeta)
+  if (!Array.isArray(merged.meta.videos)) merged.meta.videos = base.videos || [];
+
+  // adiciona o campo "episode" logo abaixo de "season"
+  merged.meta.videos = merged.meta.videos.map((v) => ({
+    ...v,
+    episode: v.number ?? v.episode ?? 0
+  }));
 
   await ensureDirs(OUT);
   await fs.writeFile(OUT, JSON.stringify(merged, null, 2), "utf8");
