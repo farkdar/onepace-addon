@@ -1,6 +1,6 @@
 {
   "id": "org.onepace.addon",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "name": "One Pace",
   "description": "Streams do One Pace (IMDb tt31228002) usando meta espelhado do Cinemeta.",
   "resources": ["catalog", "meta", "stream"],
