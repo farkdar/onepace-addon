@@ -1,0 +1,9 @@
+{
+  "id": "org.onepace.addon",
+  "version": "1.0.0",
+  "name": "One Pace",
+  "description": "One Pace (edits) — manifest estático via GitHub Pages",
+  "resources": ["catalog","stream"],
+  "types": ["series"],
+  "catalogs": [{ "id":"onepace_catalog", "type":"series", "name":"One Pace (Edits)" }]
+}
