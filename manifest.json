@@ -1,12 +1,12 @@
 {
   "id": "org.onepace.addon",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "name": "One Pace",
   "description": "Streams do One Pace (IMDb tt31228002) usando Cinemeta para temporadas/episódios.",
-  "resources": ["catalog", "meta","stream"],
+  "resources": ["catalog", "meta", "stream"],
   "types": ["series"],
   "catalogs": [
     { "id": "onepace_catalog", "type": "series", "name": "One Pace (Edits)" }
   ],
-  "idPrefixes": ["tt31228002"]
+  "idPrefixes": ["tt"]
 }
