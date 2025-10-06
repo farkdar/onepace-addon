@@ -2,8 +2,5 @@
   "name": "onepace-addon-tools",
   "private": true,
   "type": "module",
-  "scripts": {
-    "build-meta": "node scripts/build-meta.mjs"
-  },
-  "dependencies": {}
+  "scripts": { "build-meta": "node scripts/build-meta.mjs" }
 }
