@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build-meta": "node scripts/build-meta.mjs",
-    "build-subs": "node scripts/generate-subs-from-folder.mjs",
+    "build-subs": "node scripts/generate-subs.mjs",
     "build": "npm run build-meta && npm run build-subs"
   },
   "dependencies": {}
