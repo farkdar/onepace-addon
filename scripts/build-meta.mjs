@@ -1,15 +1,46 @@
+// scripts/build-meta.mjs
 import fs from "node:fs/promises";
 
+// ARQUIVOS / URLS
 const OUT = "meta/series/tt31228002.json";
 const SRC = "https://v3-cinemeta.strem.io/meta/series/tt31228002.json";
 
-const poster = "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/poster.png";
-const logo = "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/logo.png";
-const background = "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/banner.jpg";
+// Use sempre GitHub Pages (mais estável que raw.githubusercontent)
+const poster     = "https://farkdar.github.io/onepace-addon/assets/poster.png";
+const logo       = "https://farkdar.github.io/onepace-addon/assets/logo.png";
+const background = "https://farkdar.github.io/onepace-addon/assets/banner.jpg";
 
 const ensureDirs = async (filePath) => {
   const dir = filePath.split("/").slice(0, -1).join("/");
   await fs.mkdir(dir, { recursive: true });
+};
+
+const normalizeVideos = (videos = []) => {
+  // 1) dedupe por id (se houver)
+  const seen = new Set();
+  const deduped = [];
+  for (const v of videos) {
+    const key = v.id || `${v.season}:${v.number ?? v.episode}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      deduped.push(v);
+    }
+  }
+
+  // 2) garantir "episode" e números inteiros
+  const withEpisode = deduped.map((v) => ({
+    ...v,
+    season: Number(v.season ?? v.S ?? 0),
+    number: Number(v.number ?? v.N ?? v.episode ?? 0),
+    episode: Number(v.episode ?? v.number ?? 0),
+  }));
+
+  // 3) ordenar por season asc, episode asc
+  withEpisode.sort((a, b) =>
+    (a.season - b.season) || (a.episode - b.episode)
+  );
+
+  return withEpisode;
 };
 
 const main = async () => {
@@ -18,32 +49,30 @@ const main = async () => {
   const data = await res.json();
 
   const base = data?.meta ?? {};
-  const merged = {
-    meta: {
-      id: "tt31228002",
-      type: "series",
-      name: base.name || "One Pace",
-      // mantém tudo que veio do Cinemeta:
-      ...base,
-      // injeta/força suas imagens:
-      poster,
-      logo,
-      background
-    }
+
+  // Monta UM ÚNICO objeto meta. Nada fora de "meta" no arquivo final.
+  const mergedMeta = {
+    // mantemos tudo do Cinemeta primeiro…
+    ...base,
+
+    // …e sobrescrevemos/forçamos o que é crítico:
+    id: "tt31228002",
+    type: "series",
+    name: base.name || "One Pace",
+
+    poster,
+    logo,
+    background,
+
+    // vídeos normalizados ao final (para garantir consistência)
+    videos: normalizeVideos(base.videos),
   };
 
-  // garantia: sempre tenha videos (copiados do cinemeta)
-  if (!Array.isArray(merged.meta.videos)) merged.meta.videos = base.videos || [];
-
-  // adiciona o campo "episode" logo abaixo de "season"
-  merged.meta.videos = merged.meta.videos.map((v) => ({
-    ...v,
-    episode: v.number ?? v.episode ?? 0
-  }));
+  const finalDoc = { meta: mergedMeta };
 
   await ensureDirs(OUT);
-  await fs.writeFile(OUT, JSON.stringify(merged, null, 2), "utf8");
-  console.log(`OK: gerado ${OUT} com ${merged.meta.videos.length} vídeos`);
+  await fs.writeFile(OUT, JSON.stringify(finalDoc, null, 2), "utf8");
+  console.log(`OK: gerado ${OUT} com ${mergedMeta.videos?.length ?? 0} vídeos`);
 };
 
 main().catch((e) => {

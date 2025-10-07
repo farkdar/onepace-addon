@@ -1,11 +1,5 @@
 {
   "meta": {
-    "id": "tt31228002",
-    "type": "series",
-    "name": "One Pace",
-    "poster": "https://farkdar.github.io/onepace-addon/assets/poster.png",
-    "logo": "https://farkdar.github.io/onepace-addon/assets/logo.png",
-    "background": "https://farkdar.github.io/onepace-addon/assets/banner.jpg",
     "status": "Continuing",
     "videos": [
       {
@@ -273,50 +267,6 @@
         "episode": 9
       },
       {
-        "name": "The Adventures of Buggy's Crew",
-        "season": 7,
-        "number": 1,
-        "firstAired": "2023-10-07T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:7:1",
-        "overview": "",
-        "imdb_id": "tt36373481",
-        "episode": 1
-      },
-      {
-        "name": "The Town of the Beginning and the End",
-        "season": 7,
-        "number": 2,
-        "firstAired": "2020-09-22T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:7:2",
-        "overview": "",
-        "imdb_id": "tt36392171",
-        "episode": 2
-      },
-      {
-        "name": "Parallels",
-        "season": 7,
-        "number": 3,
-        "firstAired": "2020-09-22T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:7:3",
-        "overview": "",
-        "imdb_id": "tt36392135",
-        "episode": 3
-      },
-      {
-        "name": "The Legend Has Begun",
-        "season": 7,
-        "number": 4,
-        "firstAired": "2020-09-22T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:7:4",
-        "overview": "",
-        "imdb_id": "tt36373583",
-        "episode": 4
-      },
-      {
         "name": "Arlong Park",
         "season": 6,
         "number": 1,
@@ -425,6 +375,50 @@
         "overview": "",
         "imdb_id": "tt36372478",
         "episode": 10
+      },
+      {
+        "name": "The Adventures of Buggy's Crew",
+        "season": 7,
+        "number": 1,
+        "firstAired": "2023-10-07T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:7:1",
+        "overview": "",
+        "imdb_id": "tt36373481",
+        "episode": 1
+      },
+      {
+        "name": "The Town of the Beginning and the End",
+        "season": 7,
+        "number": 2,
+        "firstAired": "2020-09-22T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:7:2",
+        "overview": "",
+        "imdb_id": "tt36392171",
+        "episode": 2
+      },
+      {
+        "name": "Parallels",
+        "season": 7,
+        "number": 3,
+        "firstAired": "2020-09-22T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:7:3",
+        "overview": "",
+        "imdb_id": "tt36392135",
+        "episode": 3
+      },
+      {
+        "name": "The Legend Has Begun",
+        "season": 7,
+        "number": 4,
+        "firstAired": "2020-09-22T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:7:4",
+        "overview": "",
+        "imdb_id": "tt36373583",
+        "episode": 4
       },
       {
         "name": "Reverse Mountain",
@@ -622,94 +616,6 @@
         "id": "tt31228002:11:8",
         "overview": "",
         "imdb_id": "tt36374390",
-        "episode": 8
-      },
-      {
-        "name": "Why the Log Pose is Spherical",
-        "season": 13,
-        "number": 1,
-        "firstAired": "2023-01-28T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:1",
-        "overview": "",
-        "imdb_id": "tt36408071",
-        "episode": 1
-      },
-      {
-        "name": "Never Dream",
-        "season": 13,
-        "number": 2,
-        "firstAired": "2023-02-11T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:2",
-        "overview": "",
-        "imdb_id": "tt36408076",
-        "episode": 2
-      },
-      {
-        "name": "People's Dreams",
-        "season": 13,
-        "number": 3,
-        "firstAired": "2023-03-11T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:3",
-        "overview": "",
-        "imdb_id": "tt36408099",
-        "episode": 3
-      },
-      {
-        "name": "Noland the Liar",
-        "season": 13,
-        "number": 4,
-        "firstAired": "2023-08-11T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:4",
-        "overview": "",
-        "imdb_id": "tt36408113",
-        "episode": 4
-      },
-      {
-        "name": "Let's Eat",
-        "season": 13,
-        "number": 5,
-        "firstAired": "2023-08-18T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:5",
-        "overview": "",
-        "imdb_id": "tt36408125",
-        "episode": 5
-      },
-      {
-        "name": "The Hundred Million Man",
-        "season": 13,
-        "number": 6,
-        "firstAired": "2023-09-08T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:6",
-        "overview": "",
-        "imdb_id": "tt36408236",
-        "episode": 6
-      },
-      {
-        "name": "The Highest Authority in the World",
-        "season": 13,
-        "number": 7,
-        "firstAired": "2023-09-15T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:7",
-        "overview": "",
-        "imdb_id": "tt36408402",
-        "episode": 7
-      },
-      {
-        "name": "The Knock-Up Stream",
-        "season": 13,
-        "number": 8,
-        "firstAired": "2023-09-29T00:00:00.000Z",
-        "rating": "0",
-        "id": "tt31228002:13:8",
-        "overview": "",
-        "imdb_id": "tt36408409",
         "episode": 8
       },
       {
@@ -942,6 +848,94 @@
         "overview": "",
         "imdb_id": "tt36374442",
         "episode": 21
+      },
+      {
+        "name": "Why the Log Pose is Spherical",
+        "season": 13,
+        "number": 1,
+        "firstAired": "2023-01-28T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:1",
+        "overview": "",
+        "imdb_id": "tt36408071",
+        "episode": 1
+      },
+      {
+        "name": "Never Dream",
+        "season": 13,
+        "number": 2,
+        "firstAired": "2023-02-11T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:2",
+        "overview": "",
+        "imdb_id": "tt36408076",
+        "episode": 2
+      },
+      {
+        "name": "People's Dreams",
+        "season": 13,
+        "number": 3,
+        "firstAired": "2023-03-11T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:3",
+        "overview": "",
+        "imdb_id": "tt36408099",
+        "episode": 3
+      },
+      {
+        "name": "Noland the Liar",
+        "season": 13,
+        "number": 4,
+        "firstAired": "2023-08-11T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:4",
+        "overview": "",
+        "imdb_id": "tt36408113",
+        "episode": 4
+      },
+      {
+        "name": "Let's Eat",
+        "season": 13,
+        "number": 5,
+        "firstAired": "2023-08-18T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:5",
+        "overview": "",
+        "imdb_id": "tt36408125",
+        "episode": 5
+      },
+      {
+        "name": "The Hundred Million Man",
+        "season": 13,
+        "number": 6,
+        "firstAired": "2023-09-08T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:6",
+        "overview": "",
+        "imdb_id": "tt36408236",
+        "episode": 6
+      },
+      {
+        "name": "The Highest Authority in the World",
+        "season": 13,
+        "number": 7,
+        "firstAired": "2023-09-15T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:7",
+        "overview": "",
+        "imdb_id": "tt36408402",
+        "episode": 7
+      },
+      {
+        "name": "The Knock-Up Stream",
+        "season": 13,
+        "number": 8,
+        "firstAired": "2023-09-29T00:00:00.000Z",
+        "rating": "0",
+        "id": "tt31228002:13:8",
+        "overview": "",
+        "imdb_id": "tt36408409",
+        "episode": 8
       },
       {
         "name": "Heaven's Gate",
@@ -1208,7 +1202,10 @@
         "episode": 24
       }
     ],
+    "id": "tt31228002",
+    "type": "series",
     "imdbRating": "8.9",
+    "name": "One Pace",
     "releaseInfo": "2017–",
     "description": "Monkey D. Luffy sets off on an adventure with his pirate crew in hopes of finding the greatest treasure ever, known as the \"One Piece.\"",
     "language": "Japanese, Spanish, English",
@@ -1218,8 +1215,8 @@
       "defaultVideoId": null,
       "hasScheduledVideos": true
     },
-    "poster": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/poster.png",
-    "logo": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/logo.png",
-    "background": "https://raw.githubusercontent.com/farkdar/onepace-addon/main/assets/banner.jpg"
+    "poster": "https://farkdar.github.io/onepace-addon/assets/poster.png",
+    "logo": "https://farkdar.github.io/onepace-addon/assets/logo.png",
+    "background": "https://farkdar.github.io/onepace-addon/assets/banner.jpg"
   }
 }
