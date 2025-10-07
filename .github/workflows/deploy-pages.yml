@@ -45,21 +45,28 @@ jobs:
           PUBLIC_BASE: https://farkdar.github.io/onepace-addon
         run: node scripts/generate-subs.mjs
 
+      # NOVO: gera stubs de stream (lista vazia) a partir das legendas
+      - name: Build stream stubs (from subtitles)
+        run: node scripts/generate-stream-stubs.mjs
+
       - name: List workspace (diagnostic)
         run: |
           echo "--- workspace files (top-level) ---"
           find . -maxdepth 2 -type d -name ".git" -prune -o -maxdepth 2 -print
           echo "--- generated subtitles ---"
           test -d subtitles && find subtitles -type f -name "*.json" | sort || echo "no subtitles folder"
+          echo "--- generated stream stubs ---"
+          test -d stream && find stream -type f -name "*.json" | sort || echo "no stream folder"
 
       - name: Prepare dist
         run: |
           rm -rf dist
-          mkdir -p dist/catalog dist/meta dist/subtitles dist/assets
+          mkdir -p dist/catalog dist/meta dist/subtitles dist/assets dist/stream
           cp manifest.json dist/
           cp -R catalog/* dist/catalog/ 2>/dev/null || true
           cp -R meta/* dist/meta/ 2>/dev/null || true
           cp -R subtitles/* dist/subtitles/ 2>/dev/null || echo "no subtitles to copy"
+          cp -R stream/* dist/stream/ 2>/dev/null || echo "no stream stubs to copy"
           cp -R assets/* dist/assets/
 
       - name: List dist (diagnostic)

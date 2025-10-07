@@ -1,2 +1,5 @@
 dist/
 subtitles/
+stream/
+node_modules/
+
