@@ -1,11 +1,9 @@
 {
-  "name": "onepace-addon-tools",
+  "name": "onepace-addon",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": {
-    "node": ">=20"
-  },
+  "engines": { "node": ">=20" },
   "scripts": {
     "build-meta": "node scripts/build-meta.mjs",
     "build-subs": "node scripts/generate-subs.mjs",

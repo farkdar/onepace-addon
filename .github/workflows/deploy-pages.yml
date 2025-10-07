@@ -1,0 +1,71 @@
+name: Build & Deploy Addon (Pages)
+
+on:
+  push:
+    paths:
+      - "assets/**"
+      - "scripts/**"
+      - "manifest.json"
+      - "catalog/**"
+      - "meta/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # Se quiser regerar o meta, mantenha esta etapa
+      - name: Build meta
+        run: |
+          if [ -f scripts/build-meta.mjs ]; then
+            node scripts/build-meta.mjs
+          else
+            echo "No meta build script, skipping."
+          fi
+
+      - name: Build subtitles
+        run: node scripts/generate-subs.mjs
+
+      - name: Prepare dist
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          mkdir -p dist/catalog dist/meta dist/subtitles dist/assets
+          cp manifest.json dist/
+          cp -R catalog/* dist/catalog/ || true
+          cp -R meta/* dist/meta/ || true
+          cp -R subtitles/* dist/subtitles/ || true
+          cp -R assets/* dist/assets/ || true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
