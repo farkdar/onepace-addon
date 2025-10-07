@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 20
 
-      # Se quiser regerar o meta, mantenha esta etapa
+      # (Opcional) Regerar meta se você usa este script
       - name: Build meta
         run: |
           if [ -f scripts/build-meta.mjs ]; then
@@ -41,18 +41,31 @@ jobs:
           fi
 
       - name: Build subtitles
+        env:
+          PUBLIC_BASE: https://farkdar.github.io/onepace-addon
         run: node scripts/generate-subs.mjs
+
+      - name: List workspace (diagnostic)
+        run: |
+          echo "--- workspace files (top-level) ---"
+          find . -maxdepth 2 -type d -name ".git" -prune -o -maxdepth 2 -print
+          echo "--- generated subtitles ---"
+          test -d subtitles && find subtitles -type f -name "*.json" | sort || echo "no subtitles folder"
 
       - name: Prepare dist
         run: |
           rm -rf dist
-          mkdir -p dist
           mkdir -p dist/catalog dist/meta dist/subtitles dist/assets
           cp manifest.json dist/
-          cp -R catalog/* dist/catalog/ || true
-          cp -R meta/* dist/meta/ || true
-          cp -R subtitles/* dist/subtitles/ || true
-          cp -R assets/* dist/assets/ || true
+          cp -R catalog/* dist/catalog/ 2>/dev/null || true
+          cp -R meta/* dist/meta/ 2>/dev/null || true
+          cp -R subtitles/* dist/subtitles/ 2>/dev/null || echo "no subtitles to copy"
+          cp -R assets/* dist/assets/
+
+      - name: List dist (diagnostic)
+        run: |
+          echo "--- dist content ---"
+          find dist -type f | sort
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
