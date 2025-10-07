@@ -2,7 +2,7 @@
   "id": "farkdar.onepace",
   "version": "1.0.8",
   "name": "One Pace",
-  "description": "Streams de One Pace usando meta espelhado do cinemata (IMDb tt31228002) com implementação de legenda em ingles e português.",
+  "description": "Streams de One Pace usando meta espelhado do cinemata (IMDb tt31228002) com implementação de legenda em ingles e português. Para funcionar é necessário MediaFusion (scrapper que possui o projeto OnePace) e é preciso que este addon fique acima do cinemata, utilize um addon mannager como [https://stremio-addon-manager.vercel.app/]",
   "types": ["series"],
   "resources": ["catalog", "meta", "subtitles"],
   "idPrefixes": ["tt", "onepace:"],

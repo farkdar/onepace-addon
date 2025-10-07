@@ -1,9 +1,15 @@
 {
   "name": "onepace-addon-tools",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "build-meta": "node scripts/build-meta.mjs"
+    "build-meta": "node scripts/build-meta.mjs",
+    "build-subs": "node scripts/generate-subs-from-folder.mjs",
+    "build": "npm run build-meta && npm run build-subs"
   },
   "dependencies": {}
 }
