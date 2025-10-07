@@ -1,12 +1,12 @@
 {
-  "id": "org.onepace.addon",
-  "version": "1.0.7",
+  "id": "farkdar.onepace",
+  "version": "1.0.8",
   "name": "One Pace",
-  "description": "Streams do One Pace (IMDb tt31228002) usando meta espelhado do Cinemeta.",
-  "resources": ["catalog", "meta", "stream"],
+  "description": "Streams de One Pace usando meta espelhado do cinemata (IMDb tt31228002) com implementação de legenda em ingles e português.",
   "types": ["series"],
+  "resources": ["catalog", "meta", "subtitles"],
+  "idPrefixes": ["tt", "onepace:"],
   "catalogs": [
-    { "id": "onepace_catalog", "type": "series", "name": "One Pace (Edits)" }
-  ],
-  "idPrefixes": ["tt"]
+    { "type": "series", "id": "onepace", "name": "One Pace" }
+  ]
 }

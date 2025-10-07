@@ -11,4 +11,9 @@ Para atualizar a maquina: (faça antes de atualizar qualquer coisa)
 git checkout main && git pull origin main --rebase
 
 Para atualizar o github:
-git add . && git commit -m "mensagem do commit" && git pull --rebase && git push
+git add . && git commit -m "atualização" && git pull --rebase && git push
+
+
+Scripts
+$ Build-meta.mjs  //  Serve para puxar os dados do cinemata da obra (que puxa do imdb) e reescreve adicionando "episode". Isso permite as funcionalidades do stremio de "temporadas".
+$ generate-from-meta.mjs  //  Serve para criar os arquivos de subtitles, com base nos dados do cinemata
